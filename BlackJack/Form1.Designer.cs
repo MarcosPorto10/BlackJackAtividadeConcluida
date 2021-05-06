@@ -195,7 +195,6 @@ namespace BlackJack
             this.Name = "Form_jogo";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.Text = "Black Jack (Versão1.0)";
-            this.Load += new System.EventHandler(this.Form_jogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
