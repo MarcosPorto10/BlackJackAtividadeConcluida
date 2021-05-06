@@ -15,7 +15,11 @@ namespace BlackJack
     https://classroom.google.com/c/MzMzNDY3ODkyNzgz?cjc=hktz2w3
 
     enviar nesse link individualmente
-    cada aluno postar seu RA e Nome e link do gitHub */
+    cada aluno postar seu RA e Nome e link do gitHub 
+    
+     fausto garcia jacinto
+    ra 2220100922
+    */
 
 
     public partial class Form_jogo : Form
@@ -83,8 +87,6 @@ namespace BlackJack
 
             private void button1_Click(object sender, EventArgs e)
         {
-            
-
             Jogada(pictureBox1, 1);
            
 
