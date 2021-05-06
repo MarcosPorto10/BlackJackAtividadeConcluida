@@ -10,7 +10,14 @@ using System.Windows.Forms;
 
 namespace BlackJack
 {
-    //atividade blackjack em grupo
+    /*atividade blackjack em grupo
+
+    https://classroom.google.com/c/MzMzNDY3ODkyNzgz?cjc=hktz2w3
+
+    enviar nesse link individualmente
+    cada aluno postar seu RA e Nome e link do gitHub */
+
+
     public partial class Form_jogo : Form
     {
         public Form_jogo()
