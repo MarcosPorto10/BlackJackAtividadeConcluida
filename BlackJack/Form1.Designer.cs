@@ -42,6 +42,8 @@ namespace BlackJack
             this.lbl_Pontos_B = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Resultado = new System.Windows.Forms.Label();
+            this.bntCaveira = new System.Windows.Forms.Button();
+            this.bntTradicional = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -171,11 +173,34 @@ namespace BlackJack
             this.lbl_Resultado.Size = new System.Drawing.Size(0, 28);
             this.lbl_Resultado.TabIndex = 11;
             // 
+            // bntCaveira
+            // 
+            this.bntCaveira.Location = new System.Drawing.Point(381, 553);
+            this.bntCaveira.Name = "bntCaveira";
+            this.bntCaveira.Size = new System.Drawing.Size(137, 29);
+            this.bntCaveira.TabIndex = 12;
+            this.bntCaveira.Text = "cartas caveira";
+            this.bntCaveira.UseVisualStyleBackColor = true;
+            this.bntCaveira.Click += new System.EventHandler(this.bntCaveira_Click);
+            // 
+            // bntTradicional
+            // 
+            this.bntTradicional.Enabled = false;
+            this.bntTradicional.Location = new System.Drawing.Point(381, 602);
+            this.bntTradicional.Name = "bntTradicional";
+            this.bntTradicional.Size = new System.Drawing.Size(137, 29);
+            this.bntTradicional.TabIndex = 13;
+            this.bntTradicional.Text = "cartas tradicional";
+            this.bntTradicional.UseVisualStyleBackColor = true;
+            this.bntTradicional.Click += new System.EventHandler(this.bntTradicional_Click);
+            // 
             // Form_jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 669);
+            this.Controls.Add(this.bntTradicional);
+            this.Controls.Add(this.bntCaveira);
             this.Controls.Add(this.lbl_Resultado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Pontos_B);
@@ -194,7 +219,7 @@ namespace BlackJack
             this.MinimizeBox = false;
             this.Name = "Form_jogo";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
-            this.Text = "Black Jack (Versão1.0)";
+            this.Text = "BlackJack versão (meme)";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
@@ -216,6 +241,8 @@ namespace BlackJack
         private System.Windows.Forms.Label lbl_Pontos_B;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Resultado;
+        private System.Windows.Forms.Button bntCaveira;
+        private System.Windows.Forms.Button bntTradicional;
     }
 }
 

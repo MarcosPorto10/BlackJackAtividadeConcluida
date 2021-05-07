@@ -21,6 +21,7 @@ namespace BlackJack
     ra 2220100922
     */
 
+   
 
     public partial class Form_jogo : Form
     {
@@ -30,8 +31,11 @@ namespace BlackJack
             btn_reiniciar.Enabled = false;
             btn_jogar_2.Enabled = false;
             btn_parar_2.Enabled = false;
+           
         }
 
+        public bool caveira = false;
+        public bool tradicional = true;
         int pontos_A = 0;
         int pontos_B = 0;
 
@@ -61,23 +65,45 @@ namespace BlackJack
             Random sorteio = new Random();
             x = sorteio.Next(1, 14);
 
-
-            switch (x)
+            if (tradicional == true && caveira == false)
             {
-                case 1:     A.Image = Properties.Resources.a;    total_pontos += 1;     break;
-                case 2:     A.Image = Properties.Resources._2;   total_pontos += 2;     break;
-                case 3:     A.Image = Properties.Resources._3;   total_pontos += 3;     break;
-                case 4:     A.Image = Properties.Resources._4;   total_pontos += 4;     break;
-                case 5:     A.Image = Properties.Resources._5;   total_pontos += 5;     break;
-                case 6:     A.Image = Properties.Resources._6;   total_pontos += 6;     break;
-                case 7:     A.Image = Properties.Resources._7;   total_pontos += 7;     break;
-                case 8:     A.Image = Properties.Resources._8;   total_pontos += 8;     break;
-                case 9:     A.Image = Properties.Resources._9;   total_pontos += 9;     break;
-                case 10:    A.Image = Properties.Resources._10;  total_pontos += 10;    break;
-                case 11:    A.Image = Properties.Resources.J;    total_pontos += 11;    break;
-                case 12:    A.Image = Properties.Resources.Q;    total_pontos += 12;    break;
-                case 13:    A.Image = Properties.Resources.K;    total_pontos += 13;    break;
+
+                switch (x)
+                {
+                    case 1: A.Image = Properties.Resources.a; total_pontos += 1; break;
+                    case 2: A.Image = Properties.Resources._2; total_pontos += 2; break;
+                    case 3: A.Image = Properties.Resources._3; total_pontos += 3; break;
+                    case 4: A.Image = Properties.Resources._4; total_pontos += 4; break;
+                    case 5: A.Image = Properties.Resources._5; total_pontos += 5; break;
+                    case 6: A.Image = Properties.Resources._6; total_pontos += 6; break;
+                    case 7: A.Image = Properties.Resources._7; total_pontos += 7; break;
+                    case 8: A.Image = Properties.Resources._8; total_pontos += 8; break;
+                    case 9: A.Image = Properties.Resources._9; total_pontos += 9; break;
+                    case 10: A.Image = Properties.Resources._10; total_pontos += 10; break;
+                    case 11: A.Image = Properties.Resources.J; total_pontos += 11; break;
+                    case 12: A.Image = Properties.Resources.Q; total_pontos += 12; break;
+                    case 13: A.Image = Properties.Resources.K; total_pontos += 13; break;
+                }
+            }else if(tradicional== false && caveira == true)
+            {
+                switch (x)
+                {
+                    case 1: A.Image = Properties.Resources.a; total_pontos += 1; break;
+                    case 2: A.Image = Properties.Resources._2; total_pontos += 2; break;
+                    case 3: A.Image = Properties.Resources._3; total_pontos += 3; break;
+                    case 4: A.Image = Properties.Resources._4; total_pontos += 4; break;
+                    case 5: A.Image = Properties.Resources._5; total_pontos += 5; break;
+                    case 6: A.Image = Properties.Resources._6; total_pontos += 6; break;
+                    case 7: A.Image = Properties.Resources._7; total_pontos += 7; break;
+                    case 8: A.Image = Properties.Resources._8; total_pontos += 8; break;
+                    case 9: A.Image = Properties.Resources._9; total_pontos += 9; break;
+                    case 10: A.Image = Properties.Resources._10; total_pontos += 10; break;
+                    case 11: A.Image = Properties.Resources.J; total_pontos += 11; break;
+                    case 12: A.Image = Properties.Resources.Q; total_pontos += 12; break;
+                    case 13: A.Image = Properties.Resources.K; total_pontos += 13; break;
+                }
             }
+
 
             if (jogador == 1)
                 pontos_A += total_pontos;
@@ -179,6 +205,22 @@ namespace BlackJack
             btn_parar_2.Enabled = false;
             btn_reiniciar.Enabled = true;
             resultado();
+        }
+
+        private void bntCaveira_Click(object sender, EventArgs e)
+        {
+            caveira = true;
+            tradicional = false;
+            bntTradicional.Enabled = true;
+            bntCaveira.Enabled = false;
+        }
+
+        private void bntTradicional_Click(object sender, EventArgs e)
+        {
+            caveira = false;
+            tradicional = true;
+            bntTradicional.Enabled = false;
+            bntCaveira.Enabled = true;
         }
     }
 }
