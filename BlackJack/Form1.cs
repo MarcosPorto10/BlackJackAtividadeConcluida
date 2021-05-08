@@ -25,6 +25,7 @@ namespace BlackJack
 
     public partial class Form_jogo : Form
     {
+
         public Form_jogo()
         {
             InitializeComponent();
@@ -36,8 +37,10 @@ namespace BlackJack
 
         public bool marvel = false;
         public bool tradicional = true;
+        public bool futebol = false;
         int pontos_A = 0;
         int pontos_B = 0;
+
 
         public void resultado()
         {
@@ -59,7 +62,7 @@ namespace BlackJack
                 lbl_Resultado.Text = "SEM VENCEDOR";
         }
 
-        public void Jogada(PictureBox A,PictureBox B,int jogador,Label C)
+        public void Jogada(PictureBox A,PictureBox B,PictureBox D,int jogador,Label C)
         {
             int x, total_pontos = 0;
             Random sorteio = new Random();
@@ -75,6 +78,12 @@ namespace BlackJack
                         B.Image = Properties.Resources.vingadores;
                         C.Visible = true;
                         C.Text = "A";
+                    }else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__5_;
+                        C.Visible = true;
+                        C.Text = "Perde 1";
+                        total_pontos -= 1;
                     }
                     break;
                 case 2:
@@ -83,6 +92,12 @@ namespace BlackJack
                     if (marvel == true)
                     {
                         B.Image = Properties.Resources.batman;
+                        C.Visible = true;
+                        C.Text = "2";
+                    }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__1_;
                         C.Visible = true;
                         C.Text = "2";
                     }
@@ -96,6 +111,12 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text = "3";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__8_;
+                        C.Visible = true;
+                        C.Text = "3";
+                    }
                     break;
                 case 4: 
                     A.Image = Properties.Resources._4;
@@ -103,6 +124,12 @@ namespace BlackJack
                     if (marvel == true)
                     {
                         B.Image = Properties.Resources.homem_aranha;
+                        C.Visible = true;
+                        C.Text = "4";
+                    }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__13_;
                         C.Visible = true;
                         C.Text = "4";
                     }
@@ -116,6 +143,12 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text = "5";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__11_;
+                        C.Visible = true;
+                        C.Text = "5";
+                    }
                     break;
                 case 6:
                     A.Image = Properties.Resources._6;
@@ -126,6 +159,12 @@ namespace BlackJack
                         C.Visible=true;
                         C.Text = "6";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__2_;
+                        C.Visible = true;
+                        C.Text = "6";
+                    }
                     break;
                 case 7:
                     A.Image = Properties.Resources._7;
@@ -133,6 +172,12 @@ namespace BlackJack
                     if (marvel == true)
                     {
                         B.Image = Properties.Resources.hulk;
+                        C.Visible = true;
+                        C.Text = "7";
+                    }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__10_;
                         C.Visible = true;
                         C.Text = "7";
                     }
@@ -146,6 +191,12 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text="8";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__12_;
+                        C.Visible = true;
+                        C.Text = "8";
+                    }
                     break;
                 case 9:
                     A.Image = Properties.Resources._9;
@@ -156,6 +207,13 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text = "9";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__3_;
+                        C.Visible = true;
+                        C.Text = "9";
+                    }
+
                     break;
                 case 10:
                     A.Image = Properties.Resources._10;
@@ -165,6 +223,11 @@ namespace BlackJack
                         B.Image = Properties.Resources.wolverine;
                         C.Visible = true;
                         C.Text="10";
+                    }else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__14_;
+                        C.Visible = true;
+                        C.Text = "10";
                     }
                     break;
                 case 11:
@@ -173,6 +236,12 @@ namespace BlackJack
                     if (marvel == true)
                     {
                         B.Image = Properties.Resources.flash;
+                        C.Visible = true;
+                        C.Text = "J";
+                    }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__6_;
                         C.Visible = true;
                         C.Text = "J";
                     }
@@ -186,6 +255,12 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text = "Q";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__9_;
+                        C.Visible = true;
+                        C.Text = "Q";
+                    }
                     break;
                 case 13:
                     A.Image = Properties.Resources.K;
@@ -196,6 +271,14 @@ namespace BlackJack
                         C.Visible = true;
                         C.Text = "K";
                     }
+                    else if (futebol == true)
+                    {
+                        D.Image = Properties.Resources.futebol__4_;
+                        C.Visible = true;
+                        C.Text = "A,B,C";
+                        total_pontos = 21;
+                    }
+
                     break;
 
             }
@@ -209,10 +292,11 @@ namespace BlackJack
 
             private void button1_Click(object sender, EventArgs e)
         {
-            Jogada(pictureBox1,pictureBox3, 1,label2);
+            Jogada(pictureBox1,pictureBox3,pictureBox5, 1,label2);
 
             bntTradicional.Enabled = false;
             btnMarvel.Enabled = false;
+            btnFutebol.Enabled = false;
 
             if (pontos_A <= 21)
             {   // JOGANDO
@@ -256,18 +340,30 @@ namespace BlackJack
             pictureBox2.Image = Properties.Resources._0;
             pictureBox3.Image = Properties.Resources.marvel_comics;
             pictureBox4.Image = Properties.Resources.marvel_comics;
+            pictureBox5.Image = Properties.Resources.futebol__7_;
+            pictureBox6.Image = Properties.Resources.futebol__7_;
+
             label2.Visible = false;
             label3.Visible = false;
             if (marvel == true)
             {
                 bntTradicional.Enabled = true;
                 btnMarvel.Enabled = false;
+                btnFutebol.Enabled = true;
             }
-            else
+            else if(tradicional==true)
             {
                 bntTradicional.Enabled = false;
                 btnMarvel.Enabled = true;
+                btnFutebol.Enabled = true;
             }
+            else
+            {
+                bntTradicional.Enabled = true;
+                btnMarvel.Enabled = true;
+                btnFutebol.Enabled = false;
+            }
+
            
 
         }
@@ -275,7 +371,7 @@ namespace BlackJack
         private void btn_jogar_2_Click(object sender, EventArgs e)
         {
             //  ESCOLHER AS CARTAS
-            Jogada(pictureBox2,pictureBox4, 2,label3);
+            Jogada(pictureBox2,pictureBox4,pictureBox6, 2,label3);
 
             if (pontos_B <= 21)
             {   // JOGANDO
@@ -325,10 +421,16 @@ namespace BlackJack
         {
             marvel = false;
             tradicional = true;
+            futebol = false;
             bntTradicional.Enabled = false;
+            btnFutebol.Enabled = true;
             btnMarvel.Enabled = true;
+            pictureBox1.Visible = true;
+            pictureBox2.Visible = true;
             pictureBox3.Visible = false;
             pictureBox4.Visible = false;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
             label2.Visible = false;
             label3.Visible = false;
         }
@@ -336,10 +438,37 @@ namespace BlackJack
         {
             marvel = true;
             tradicional = false;
+            futebol = false;
             bntTradicional.Enabled = true;
+            btnFutebol.Enabled = true;
             btnMarvel.Enabled = false;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
             pictureBox3.Visible = true;
             pictureBox4.Visible = true;
+            pictureBox5.Visible = false;
+            pictureBox6.Visible = false;
+        }
+
+        private void btnFutebol_Click_1(object sender, EventArgs e)
+        {
+            marvel = false;
+            tradicional = false;
+            futebol = true;
+            bntTradicional.Enabled = true;
+            btnFutebol.Enabled = false;
+            btnMarvel.Enabled = true;
+            pictureBox1.Visible = false;
+            pictureBox2.Visible = false;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            pictureBox5.Visible = true;
+            pictureBox6.Visible = true;
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
