@@ -21,7 +21,7 @@ namespace BlackJack
     ra 2220100922
     */
 
-   
+
 
     public partial class Form_jogo : Form
     {
@@ -31,10 +31,10 @@ namespace BlackJack
             btn_reiniciar.Enabled = false;
             btn_jogar_2.Enabled = false;
             btn_parar_2.Enabled = false;
-           
+
         }
 
-        public bool caveira = false;
+        public bool marvel = false;
         public bool tradicional = true;
         int pontos_A = 0;
         int pontos_B = 0;
@@ -42,69 +42,165 @@ namespace BlackJack
         public void resultado()
         {
             if (pontos_A <= 21 && pontos_B <= 21)
-               if(pontos_A == pontos_B)
+                if (pontos_A == pontos_B)
                     lbl_Resultado.Text = "EMPATE";
-            else 
-                if(pontos_A > pontos_B)
+                else
+                 if (pontos_A > pontos_B)
                     lbl_Resultado.Text = "Jogador 1 GANHOU!";
+                else
+                    lbl_Resultado.Text = "Jogador 2 GANHOU!";
             else
-                    lbl_Resultado.Text = "Jogador 2 GANHOU!";
-            else 
-                if(pontos_A > 21 && pontos_B <= 21)
-                    lbl_Resultado.Text = "Jogador 2 GANHOU!";
+                if (pontos_A > 21 && pontos_B <= 21)
+                lbl_Resultado.Text = "Jogador 2 GANHOU!";
             else
                  if (pontos_A <= 21 && pontos_B > 21)
-                    lbl_Resultado.Text = "Jogador 1 GANHOU!";
+                lbl_Resultado.Text = "Jogador 1 GANHOU!";
             else
-                    lbl_Resultado.Text = "SEM VENCEDOR";
+                lbl_Resultado.Text = "SEM VENCEDOR";
         }
 
-        public void Jogada(PictureBox A, int jogador)
+        public void Jogada(PictureBox A,PictureBox B,int jogador,Label C)
         {
-            int x, total_pontos=0;
+            int x, total_pontos = 0;
             Random sorteio = new Random();
             x = sorteio.Next(1, 14);
 
-            if (tradicional == true && caveira == false)
+            switch (x)
             {
+                case 1:
+                    A.Image = Properties.Resources.a;
+                    total_pontos += 1;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.vingadores;
+                        C.Visible = true;
+                        C.Text = "A";
+                    }
+                    break;
+                case 2:
+                    A.Image = Properties.Resources._2;
+                    total_pontos += 2;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.batman;
+                        C.Visible = true;
+                        C.Text = "2";
+                    }
+                    break;
+                case 3: 
+                    A.Image = Properties.Resources._3;
+                    total_pontos += 3;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.homem_america;
+                        C.Visible = true;
+                        C.Text = "3";
+                    }
+                    break;
+                case 4: 
+                    A.Image = Properties.Resources._4;
+                    total_pontos += 4;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.homem_aranha;
+                        C.Visible = true;
+                        C.Text = "4";
+                    }
+                    break;
+                case 5:
+                    A.Image = Properties.Resources._5;
+                    total_pontos += 5;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.super_man;
+                        C.Visible = true;
+                        C.Text = "5";
+                    }
+                    break;
+                case 6:
+                    A.Image = Properties.Resources._6;
+                    total_pontos += 6;
+                    if (marvel == true)
+                    {
+                       B.Image = Properties.Resources.mulher_maravilha;
+                        C.Visible=true;
+                        C.Text = "6";
+                    }
+                    break;
+                case 7:
+                    A.Image = Properties.Resources._7;
+                    total_pontos += 7;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.hulk;
+                        C.Visible = true;
+                        C.Text = "7";
+                    }
+                    break;
+                case 8:
+                    A.Image = Properties.Resources._8;
+                    total_pontos += 8;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.iron_man;
+                        C.Visible = true;
+                        C.Text="8";
+                    }
+                    break;
+                case 9:
+                    A.Image = Properties.Resources._9;
+                    total_pontos += 9;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.thor;
+                        C.Visible = true;
+                        C.Text = "9";
+                    }
+                    break;
+                case 10:
+                    A.Image = Properties.Resources._10;
+                    total_pontos += 10;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.wolverine;
+                        C.Visible = true;
+                        C.Text="10";
+                    }
+                    break;
+                case 11:
+                    A.Image = Properties.Resources.J;
+                    total_pontos += 11;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.flash;
+                        C.Visible = true;
+                        C.Text = "J";
+                    }
+                    break;
+                case 12:
+                    A.Image = Properties.Resources.Q;
+                    total_pontos += 12;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.mulher_maravilha;
+                        C.Visible = true;
+                        C.Text = "Q";
+                    }
+                    break;
+                case 13:
+                    A.Image = Properties.Resources.K;
+                    total_pontos += 13;
+                    if (marvel == true)
+                    {
+                        B.Image = Properties.Resources.nick_fury;
+                        C.Visible = true;
+                        C.Text = "K";
+                    }
+                    break;
 
-                switch (x)
-                {
-                    case 1: A.Image = Properties.Resources.a; total_pontos += 1; break;
-                    case 2: A.Image = Properties.Resources._2; total_pontos += 2; break;
-                    case 3: A.Image = Properties.Resources._3; total_pontos += 3; break;
-                    case 4: A.Image = Properties.Resources._4; total_pontos += 4; break;
-                    case 5: A.Image = Properties.Resources._5; total_pontos += 5; break;
-                    case 6: A.Image = Properties.Resources._6; total_pontos += 6; break;
-                    case 7: A.Image = Properties.Resources._7; total_pontos += 7; break;
-                    case 8: A.Image = Properties.Resources._8; total_pontos += 8; break;
-                    case 9: A.Image = Properties.Resources._9; total_pontos += 9; break;
-                    case 10: A.Image = Properties.Resources._10; total_pontos += 10; break;
-                    case 11: A.Image = Properties.Resources.J; total_pontos += 11; break;
-                    case 12: A.Image = Properties.Resources.Q; total_pontos += 12; break;
-                    case 13: A.Image = Properties.Resources.K; total_pontos += 13; break;
-                }
-            }else if(tradicional== false && caveira == true)
-            {
-                switch (x)
-                {
-                    case 1: A.Image = Properties.Resources.a; total_pontos += 1; break;
-                    case 2: A.Image = Properties.Resources._2; total_pontos += 2; break;
-                    case 3: A.Image = Properties.Resources._3; total_pontos += 3; break;
-                    case 4: A.Image = Properties.Resources._4; total_pontos += 4; break;
-                    case 5: A.Image = Properties.Resources._5; total_pontos += 5; break;
-                    case 6: A.Image = Properties.Resources._6; total_pontos += 6; break;
-                    case 7: A.Image = Properties.Resources._7; total_pontos += 7; break;
-                    case 8: A.Image = Properties.Resources._8; total_pontos += 8; break;
-                    case 9: A.Image = Properties.Resources._9; total_pontos += 9; break;
-                    case 10: A.Image = Properties.Resources._10; total_pontos += 10; break;
-                    case 11: A.Image = Properties.Resources.J; total_pontos += 11; break;
-                    case 12: A.Image = Properties.Resources.Q; total_pontos += 12; break;
-                    case 13: A.Image = Properties.Resources.K; total_pontos += 13; break;
-                }
             }
-
-
+        
+    
             if (jogador == 1)
                 pontos_A += total_pontos;
             else
@@ -113,7 +209,7 @@ namespace BlackJack
 
             private void button1_Click(object sender, EventArgs e)
         {
-            Jogada(pictureBox1, 1);
+            Jogada(pictureBox1,pictureBox3, 1,label2);
            
 
             if(pontos_A <= 21)
@@ -156,17 +252,22 @@ namespace BlackJack
 
             pictureBox1.Image = Properties.Resources._0;
             pictureBox2.Image = Properties.Resources._0;
+            pictureBox3.Image = Properties.Resources.marvel_comics;
+            pictureBox4.Image = Properties.Resources.marvel_comics;
+            label2.Visible = false;
+            label3.Visible = false;
 
         }
 
         private void btn_jogar_2_Click(object sender, EventArgs e)
         {
             //  ESCOLHER AS CARTAS
-            Jogada(pictureBox2, 2);
+            Jogada(pictureBox2,pictureBox4, 2,label3);
 
             if (pontos_B <= 21)
             {   // JOGANDO
                 lbl_Pontos_B.Text = Convert.ToString(pontos_B);
+               
                 if (pontos_B == 21)
                 {
                     //lbl_Resultado.Text = "GANHOU!!!";
@@ -207,20 +308,25 @@ namespace BlackJack
             resultado();
         }
 
-        private void bntCaveira_Click(object sender, EventArgs e)
-        {
-            caveira = true;
-            tradicional = false;
-            bntTradicional.Enabled = true;
-            bntCaveira.Enabled = false;
-        }
-
         private void bntTradicional_Click(object sender, EventArgs e)
         {
-            caveira = false;
+            marvel = false;
             tradicional = true;
             bntTradicional.Enabled = false;
-            bntCaveira.Enabled = true;
+            btnMarvel.Enabled = true;
+            pictureBox3.Visible = false;
+            pictureBox4.Visible = false;
+            label2.Visible = false;
+            label3.Visible = false;
+        }
+        private void btnMarvel_Click(object sender, EventArgs e)
+        {
+            marvel = true;
+            tradicional = false;
+            bntTradicional.Enabled = true;
+            btnMarvel.Enabled = false;
+            pictureBox3.Visible = true;
+            pictureBox4.Visible = true;
         }
     }
 }

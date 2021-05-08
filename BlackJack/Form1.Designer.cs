@@ -42,10 +42,17 @@ namespace BlackJack
             this.lbl_Pontos_B = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_Resultado = new System.Windows.Forms.Label();
-            this.bntCaveira = new System.Windows.Forms.Button();
+            this.btnMarvel = new System.Windows.Forms.Button();
             this.bntTradicional = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // btn_jogar_1
@@ -173,15 +180,15 @@ namespace BlackJack
             this.lbl_Resultado.Size = new System.Drawing.Size(0, 28);
             this.lbl_Resultado.TabIndex = 11;
             // 
-            // bntCaveira
+            // btnMarvel
             // 
-            this.bntCaveira.Location = new System.Drawing.Point(381, 553);
-            this.bntCaveira.Name = "bntCaveira";
-            this.bntCaveira.Size = new System.Drawing.Size(137, 29);
-            this.bntCaveira.TabIndex = 12;
-            this.bntCaveira.Text = "cartas caveira";
-            this.bntCaveira.UseVisualStyleBackColor = true;
-            this.bntCaveira.Click += new System.EventHandler(this.bntCaveira_Click);
+            this.btnMarvel.Location = new System.Drawing.Point(381, 553);
+            this.btnMarvel.Name = "btnMarvel";
+            this.btnMarvel.Size = new System.Drawing.Size(137, 29);
+            this.btnMarvel.TabIndex = 12;
+            this.btnMarvel.Text = "cartas marvel";
+            this.btnMarvel.UseVisualStyleBackColor = true;
+            this.btnMarvel.Click += new System.EventHandler(this.btnMarvel_Click);
             // 
             // bntTradicional
             // 
@@ -194,13 +201,63 @@ namespace BlackJack
             this.bntTradicional.UseVisualStyleBackColor = true;
             this.bntTradicional.Click += new System.EventHandler(this.bntTradicional_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = global::BlackJack.Properties.Resources.marvel_comics;
+            this.pictureBox3.Location = new System.Drawing.Point(30, 111);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(282, 471);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox3.TabIndex = 14;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::BlackJack.Properties.Resources.marvel_comics;
+            this.pictureBox4.Location = new System.Drawing.Point(594, 111);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(281, 471);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 15;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(30, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 78);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "label2";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(594, 41);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(202, 78);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "label3";
+            this.label3.Visible = false;
+            // 
             // Form_jogo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 669);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bntTradicional);
-            this.Controls.Add(this.bntCaveira);
+            this.Controls.Add(this.btnMarvel);
             this.Controls.Add(this.lbl_Resultado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Pontos_B);
@@ -222,6 +279,8 @@ namespace BlackJack
             this.Text = "BlackJack versão (meme)";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -241,8 +300,13 @@ namespace BlackJack
         private System.Windows.Forms.Label lbl_Pontos_B;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_Resultado;
-        private System.Windows.Forms.Button bntCaveira;
+        private System.Windows.Forms.Button btnMarvel;
         private System.Windows.Forms.Button bntTradicional;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ColorDialog colorDialog1;
     }
 }
 
