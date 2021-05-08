@@ -17,8 +17,8 @@ namespace BlackJack
     enviar nesse link individualmente
     cada aluno postar seu RA e Nome e link do gitHub 
     
-     fausto garcia jacinto
-    ra 2220100922
+     MARCOS VINICIUS LIMA PORTO
+     RA: 2220104807
     */
 
 
@@ -467,6 +467,11 @@ namespace BlackJack
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form_jogo_Load(object sender, EventArgs e)
         {
 
         }
