@@ -323,6 +323,16 @@ namespace BlackJack.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap venom {
+            get {
+                object obj = ResourceManager.GetObject("venom", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap vingadores {
             get {
                 object obj = ResourceManager.GetObject("vingadores", resourceCulture);

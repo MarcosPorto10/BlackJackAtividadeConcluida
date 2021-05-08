@@ -182,7 +182,7 @@ namespace BlackJack
                     total_pontos += 12;
                     if (marvel == true)
                     {
-                        B.Image = Properties.Resources.mulher_maravilha;
+                        B.Image = Properties.Resources.venom;
                         C.Visible = true;
                         C.Text = "Q";
                     }
@@ -210,9 +210,11 @@ namespace BlackJack
             private void button1_Click(object sender, EventArgs e)
         {
             Jogada(pictureBox1,pictureBox3, 1,label2);
-           
 
-            if(pontos_A <= 21)
+            bntTradicional.Enabled = false;
+            btnMarvel.Enabled = false;
+
+            if (pontos_A <= 21)
             {   // JOGANDO
                 lbl_Pontos_A.Text = Convert.ToString(pontos_A);
                 if(pontos_A == 21)
@@ -256,6 +258,17 @@ namespace BlackJack
             pictureBox4.Image = Properties.Resources.marvel_comics;
             label2.Visible = false;
             label3.Visible = false;
+            if (marvel == true)
+            {
+                bntTradicional.Enabled = true;
+                btnMarvel.Enabled = false;
+            }
+            else
+            {
+                bntTradicional.Enabled = false;
+                btnMarvel.Enabled = true;
+            }
+           
 
         }
 

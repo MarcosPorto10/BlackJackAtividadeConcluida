@@ -92,7 +92,7 @@ namespace BlackJack
             // 
             this.lbl_Pontos_A.AutoSize = true;
             this.lbl_Pontos_A.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Pontos_A.Location = new System.Drawing.Point(401, 243);
+            this.lbl_Pontos_A.Location = new System.Drawing.Point(411, 241);
             this.lbl_Pontos_A.Name = "lbl_Pontos_A";
             this.lbl_Pontos_A.Size = new System.Drawing.Size(30, 31);
             this.lbl_Pontos_A.TabIndex = 3;
@@ -102,7 +102,7 @@ namespace BlackJack
             // 
             this.lbl_legenda.AutoSize = true;
             this.lbl_legenda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lbl_legenda.Location = new System.Drawing.Point(415, 205);
+            this.lbl_legenda.Location = new System.Drawing.Point(420, 203);
             this.lbl_legenda.Name = "lbl_legenda";
             this.lbl_legenda.Size = new System.Drawing.Size(76, 28);
             this.lbl_legenda.TabIndex = 4;
@@ -156,7 +156,7 @@ namespace BlackJack
             // 
             this.lbl_Pontos_B.AutoSize = true;
             this.lbl_Pontos_B.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lbl_Pontos_B.Location = new System.Drawing.Point(465, 243);
+            this.lbl_Pontos_B.Location = new System.Drawing.Point(475, 241);
             this.lbl_Pontos_B.Name = "lbl_Pontos_B";
             this.lbl_Pontos_B.Size = new System.Drawing.Size(30, 31);
             this.lbl_Pontos_B.TabIndex = 9;
@@ -165,7 +165,7 @@ namespace BlackJack
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(443, 248);
+            this.label1.Location = new System.Drawing.Point(453, 246);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(16, 20);
             this.label1.TabIndex = 10;
@@ -182,9 +182,10 @@ namespace BlackJack
             // 
             // btnMarvel
             // 
-            this.btnMarvel.Location = new System.Drawing.Point(381, 553);
+            this.btnMarvel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnMarvel.Location = new System.Drawing.Point(341, 501);
             this.btnMarvel.Name = "btnMarvel";
-            this.btnMarvel.Size = new System.Drawing.Size(137, 29);
+            this.btnMarvel.Size = new System.Drawing.Size(227, 62);
             this.btnMarvel.TabIndex = 12;
             this.btnMarvel.Text = "cartas marvel";
             this.btnMarvel.UseVisualStyleBackColor = true;
@@ -193,9 +194,10 @@ namespace BlackJack
             // bntTradicional
             // 
             this.bntTradicional.Enabled = false;
-            this.bntTradicional.Location = new System.Drawing.Point(381, 602);
+            this.bntTradicional.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bntTradicional.Location = new System.Drawing.Point(341, 580);
             this.bntTradicional.Name = "bntTradicional";
-            this.bntTradicional.Size = new System.Drawing.Size(137, 29);
+            this.bntTradicional.Size = new System.Drawing.Size(227, 62);
             this.bntTradicional.TabIndex = 13;
             this.bntTradicional.Text = "cartas tradicional";
             this.bntTradicional.UseVisualStyleBackColor = true;
@@ -228,7 +230,7 @@ namespace BlackJack
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(30, 41);
+            this.label2.Location = new System.Drawing.Point(30, 111);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(202, 78);
             this.label2.TabIndex = 16;
@@ -240,7 +242,7 @@ namespace BlackJack
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 35F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(594, 41);
+            this.label3.Location = new System.Drawing.Point(594, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(202, 78);
             this.label3.TabIndex = 17;
@@ -254,22 +256,22 @@ namespace BlackJack
             this.ClientSize = new System.Drawing.Size(894, 669);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.pictureBox4);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.bntTradicional);
             this.Controls.Add(this.btnMarvel);
             this.Controls.Add(this.lbl_Resultado);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lbl_Pontos_B);
             this.Controls.Add(this.btn_parar_2);
-            this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.btn_jogar_2);
             this.Controls.Add(this.btn_parar_1);
             this.Controls.Add(this.lbl_legenda);
             this.Controls.Add(this.lbl_Pontos_A);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.btn_reiniciar);
             this.Controls.Add(this.btn_jogar_1);
+            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.pictureBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.MaximizeBox = false;
