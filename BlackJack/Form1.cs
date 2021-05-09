@@ -18,7 +18,7 @@ namespace BlackJack
     cada aluno postar seu RA e Nome e link do gitHub 
     
      MARCOS VINICIUS LIMA PORTO
-     RA: 2220104807
+     RA= 2220104807
     */
 
 
